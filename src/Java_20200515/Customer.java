@@ -10,5 +10,5 @@ public class Customer {
 	public String phone;
 	public double balance;
 	public boolean isReleased;
-	
+	public static double interestRate;
 }
