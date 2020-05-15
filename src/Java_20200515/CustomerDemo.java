@@ -1,0 +1,41 @@
+package Java_20200515;
+
+public class CustomerDemo {
+	public static void main(String[] args) {
+
+		// 클래스 객체 생성
+		// Customer => 타입
+		// c1 => 변수
+		// new Customer() => 객체 생성
+		Customer c1 = new Customer();
+		c1.name = "박은희";
+		c1.email = "pmi3001@gmail.com";
+		c1.phone = "010-3829-9169";
+		c1.balance = 100_000;
+		c1.isReleased = false;
+		
+		System.out.println(c1.name);
+		System.out.println(c1.email);
+		System.out.println(c1.phone);
+		System.out.println(c1.balance);
+		System.out.println(c1.isReleased);
+		
+		Customer c2 = new Customer();
+		c2.name = "손정의";
+		c2.email = "son@softbank.org";
+		c2.phone = "010-3456-7890";
+		c2.balance = 100_000_000;
+		c2.isReleased = false;
+		
+		System.out.println(c2.name);
+		System.out.println(c2.email);
+		System.out.println(c2.phone);
+		System.out.println(c2.balance);
+		System.out.println(c2.isReleased);
+		
+		Customer c3 = c2; //reference : 함께 가르킨다.
+		c3.name="박은희";
+		
+		System.out.println(c2.name);
+	}
+}
