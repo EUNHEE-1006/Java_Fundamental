@@ -5,11 +5,24 @@ public class Calendar {
 	private int month;
 	private int day;
 	
+	//static final만 공개!!!=> 아예 변경자체가 안되거든...
+	
+	//year변수에 대해 변경할 일이 많다? =>getter, setter 함수
+	//오직 메서드를 통해서만 데이터를 변경하게 하라!!(setter)
+	
+	public void setYear(int y) {
+		year = y;
+	}
+	//오직 메서드를 통해서만 데이터를 가져와라!!(getter)
+	public int getYear() {
+		return year;
+	}
 	public void set(int y,int m, int d) {
 		year=y;
 		month=m;
 		day=d;
-	}
+	} //set함수를 통해서만 year, month, day를 바꿀 수 있다.!!!
+	
 	private int getCount() {
 		int totalCount = 0;
 		int preYear = year - 1;
