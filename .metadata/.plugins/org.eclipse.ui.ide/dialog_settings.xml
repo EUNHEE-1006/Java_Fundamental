@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\dev\eclipse-workspace\Java_Fundamental\src\Java_20200518"/>
+			<item value="C:\dev\eclipse-workspace\Java_Fundamental\src"/>
 			<item value="C:\dev\eclipse-workspace"/>
 			<item value="C:\dev\eclipse-workspace\Java_Fundamental"/>
 		</list>
@@ -22,5 +24,7 @@
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
