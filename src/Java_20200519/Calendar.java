@@ -5,6 +5,8 @@ public class Calendar {
 
 	// year변수에 대해 변경할 일이 많다? =>getter, setter 함수
 	// 오직 메서드를 통해서만 데이터를 변경하게 하라!!(setter)
+	private int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
 	public static final int SUNDAY = 0;
 	public static final int MONDAY = 1;
 	public static final int TUESDAY = 2;
@@ -24,8 +26,10 @@ public class Calendar {
 
 		totalCount = (preYear * 365) + (preYear / 4) - (preYear / 100) + (preYear / 400);
 
+		isLeafYear(year);
+
 		for (int i = 0; i < month - 1; i++) {
-			totalCount += getLastDay(year, i + 1);
+			totalCount += monthArray[i];
 		}
 		totalCount += day;
 		return totalCount;
@@ -33,11 +37,15 @@ public class Calendar {
 	}
 
 	private int getLastDay(int year, int month) {
-		int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-		if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+		isLeafYear(year);
+		return monthArray[month - 1];
+	}
+
+	private void isLeafYear(int year) {
+		boolean isLeafYear = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+		if (isLeafYear) {
 			monthArray[1] = 29;
 		}
-		return monthArray[month - 1];
 	}
 
 	public void print(int year, int month, int day) {
@@ -96,3 +104,4 @@ public class Calendar {
 
 }
 //메서드 자동 생성 => 마우스 오른쪽 - refector
+//반복되는 코드가 있으면 새로운 메소드로 빼기. for 훗날을 위해서
