@@ -20,4 +20,4 @@ public class MeberVariableRangeDemo  {
 		System.out.println(m.isReleased);
 		
 	}
-9}
+}

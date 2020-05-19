@@ -12,7 +12,8 @@ public class Customer {
 	public boolean isReleased;
 	public static double interestRate; //static!!! class 어디에서든 사용이 가능하다.
 									   //class 이름으로 접근해!!!
-	//final은 상수, 변하지 않아, 그래서 static final을 거의 써!!, 한번 정해지면 못바꿔,final은 instance변수로 두면 안돼 
+	//final은 상수, 변하지 않아, 그래서 static final을 거의 써!!, 한번 정해지면 못바꿔\
+	//final은 instance변수로 두면 안돼(모든 객체에 존재할 이유가 없으니까) 
 	//상수는 무조건 대문자,,, 
 	public static final String BANKNAME="신한은행";
 }
