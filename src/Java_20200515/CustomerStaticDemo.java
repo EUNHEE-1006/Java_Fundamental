@@ -11,6 +11,6 @@ public class CustomerStaticDemo {
 		Customer.interestRate=10.26;
 		
 		System.out.println(c1.interestRate);
-		Customer.BANKNAME="국민은행";
+		//Customer.BANKNAME="국민은행";
 	}
 }

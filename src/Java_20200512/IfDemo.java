@@ -17,6 +17,6 @@ public class IfDemo {
 		} else {
 			season = "없는 계절";
 		}
-		System.out.println(month + "월은  + season + " 입니다.");
+		System.out.println(month + "월은  + season" + " 입니다.");
 	}
 }

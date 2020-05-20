@@ -19,7 +19,7 @@ public class CalendarPractice {
 		int totalCount = getCount(year, month, day);
 
 		int dayOfWeek = totalCount % 7;
-		String message = null;\
+		String message = null;
 		
 
 
