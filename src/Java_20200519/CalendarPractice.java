@@ -1,7 +1,7 @@
 package Java_20200519;
 
 public class CalendarPractice {
-
+	int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	public static final int SUNDAY = 0;
 	public static final int MONDAY = 1;
 	public static final int TUESDAY = 2;
@@ -15,29 +15,13 @@ public class CalendarPractice {
 		// TODO Auto-generated constructor stub
 	}
 
-	private int getCount(int year, int month, int day) {
-		int preYear = year - 1;
-		int totalCount = (preYear * 365) + (preYear / 4) - (preYear / 100) + (preYear / 400);
-
-		int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-		boolean isLeafYear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-		if (isLeafYear) {
-			monthArray[1] = 29;
-		}
-
-		for (int i = 0; i < month - 1; i++) {
-			totalCount += monthArray[i];
-		}
-		totalCount += day;
-		return totalCount;
-
-	}
-
 	public void print(int year, int month, int day) {
 		int totalCount = getCount(year, month, day);
 
 		int dayOfWeek = totalCount % 7;
-		String message = null;
+		String message = null;\
+		
+
 
 		if (dayOfWeek == CalendarPractice.MONDAY) {
 			message = "월요일";
@@ -60,9 +44,42 @@ public class CalendarPractice {
 
 	public void print(int year, int month) {
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
-		int dayOfFirst = getCount(year, month, 0);
+		int totalCount = getCount(year, month, 0);
+		int dayOfMonth = totalCount % 7;
 
+		for (int i = 0; i < dayOfMonth; i++) {
+			System.out.print("\t");
+		}
+		for (int i = 0; i < getLastDay(year, month); i++) {
+			System.out.println(i + "\t");
+		}
 
+	}
+
+	private int getCount(int year, int month, int day) {
+		int preYear = year - 1;
+		int totalCount = (preYear * 365) + (preYear / 4) - (preYear / 100) + (preYear / 400);
+
+		isLeafYear(year);
+
+		for (int i = 0; i < month - 1; i++) {
+			totalCount += monthArray[i];
+		}
+		totalCount += day;
+		return totalCount;
+
+	}
+
+	private void isLeafYear(int year) {
+		boolean isLeafYear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+		if (isLeafYear) {
+			monthArray[1] = 29;
+		}
+	}
+
+	private int getLastDay(int year, int month) {
+		isLeafYear(year);
+		return monthArray[month - 1];
 	}
 
 }
