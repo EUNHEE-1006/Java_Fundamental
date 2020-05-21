@@ -1,5 +1,11 @@
 package Java_20200519; //OOP 코딩!! 중요!! 이해하기
 
+/**
+ * Calendar 클래스는 엄천난 클래스
+ * 
+ * @author acorn-511
+ *
+ */
 public class Calendar {
 	// static final만 공개!!!=> 아예 변경자체가 안되거든...
 
@@ -48,6 +54,9 @@ public class Calendar {
 		}
 	}
 
+	/**
+	 * 요일을 출력해주는 메소드 입니다.
+	 */
 	public void print(int year, int month, int day) {
 
 		int totalCount = getCount(year, month, day);
@@ -75,6 +84,9 @@ public class Calendar {
 		System.out.println(year + "년 " + month + "월 " + day + "일은 " + message + " 입니다.");
 	}
 
+/**
+ * 월을 출력해주는 메소드 입니다.
+ */
 	public void print(int year, int month) {
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
 
@@ -95,7 +107,9 @@ public class Calendar {
 		}
 		System.out.println("\n");
 	}
-
+/**
+년을 출력해주는 메소드 입니다.
+ */
 	public void print(int year) {
 		for (int i = 1; i <= 12; i++) {
 			print(year, i);

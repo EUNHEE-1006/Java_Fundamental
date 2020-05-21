@@ -2,7 +2,7 @@ package Java_20200512;
 
 public class IfDemo {
 	public static void main(String[] args) {
-		//run configuration => arguments => 
+		//run configuration => arguments => 초기화시켜줘야함
 		int month = Integer.parseInt(args[0]);
 		
 		String season = null;
