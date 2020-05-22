@@ -31,7 +31,7 @@ public class WrapperDemo {
 		// int s4 = s1+s2; // +는 연결연산자가 되어 1020이 됨.
 
 		String s4 = 10 + ""; // primitive 가 문자열 만나서 자동 캐스팅 됨, 이렇게 쓰지 말자
-		String s4 = String.valueOf(10); // 이렇게 쓰자!!!!!!
+		String ss4 = String.valueOf(10); // 이렇게 쓰자!!!!!!
 
 		// Auto-Boxing : primitive data type => wrapper class
 		Integer i5 = 10;
