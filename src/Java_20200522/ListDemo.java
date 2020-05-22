@@ -1,7 +1,6 @@
 package Java_20200522;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public class ListDemo {
 	public static void main(String[] args) {

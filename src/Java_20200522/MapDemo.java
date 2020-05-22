@@ -18,7 +18,7 @@ public class MapDemo {
 		map.put("1", 5555);// 키 값이 중복되면, 씌워버림!!
 
 		// 3. 출력
-		Integer value = map.get("1");
+		Integer value = map.get("1");//가장 많이 씀
 		System.out.println(value);
 		
 		//4. 모두 출력
