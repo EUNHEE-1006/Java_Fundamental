@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MemberManagementDemo {
 	private ArrayList<Member> list = new ArrayList<Member>();
-	
+
 	public void print() {
 		System.out.println("**********************************************");
 		System.out.println("* 1.insert 2.update 3.delete 4.search 5.exit *");
@@ -58,80 +58,82 @@ public class MemberManagementDemo {
 	public void update() {
 		System.out.printf("수정할 아이디를 입력하세요!!   ");
 		String id = input("아이디> ");
+		boolean isId = false;
 
 		for (int i = 0; i < list.size(); i++) {
 			Member i1 = list.get(i);
-
 			if (i1.getId().equals(id)) {
+				isId = true;
 				System.out.println("새로운 아이디를 입력하세요> ");
-				
+
 				id = input("아이디> ");
 				i1.setId(id);
-				
-			} else {
-				System.out.println("수정할 아이디가 없습니다.");
-			}
-			
-			printAll();
-			print();
-			String inputData = input("번호를 선택하세요");
-			run(inputData);
-			System.out.println(i1);
+
+			} 
 		}
 
+		if (!isId) {
+			System.out.println("수정할 아이디가 없습니다.");
+		}
+
+		printAll();
+		print();
+		String inputData = input("번호를 선택하세요");
+		run(inputData);
 	}
 
 	public void delete() {
 		System.out.printf("삭제할 아이디를 입력하세요!!   ");
 		String id = input("아이디> ");
+		boolean isId = false;
 
 		for (int i = 0; i < list.size(); i++) {
 			Member i1 = list.get(i);
 
-			if (i1.getId().equals(id)) {	
+			if (i1.getId().equals(id)) {
+				isId = true;
 				list.remove(i);
 				System.out.println("해당 아이디가 삭제되었습니다.");
-				
-			} else {
-				System.out.println("삭제할 아이디가 없습니다.");
-			
+
 			}
-			printAll();
-			print();
-			String inputData = input("번호를 선택하세요");
-			run(inputData);
-			System.out.println(i1);
 		}
+		if (!isId) {
+			System.out.println("삭제할 아이디가 없습니다.");
+		}
+		printAll();
+		print();
+		String inputData = input("번호를 선택하세요");
+		run(inputData);
 
 	}
 
 	public void search() {
 		System.out.printf("검색할 아이디를 입력하세요!!   ");
 		String id = input("아이디> ");
+		boolean isId = false;
 
 		for (int i = 0; i < list.size(); i++) {
 			Member i1 = list.get(i);
 
 			if (i1.getId().equals(id)) {
+				isId = true;
 				System.out.println("해당 아이디가 있습니다.");
-				System.out.printf("아이디 : %s, 이름 : %s",i1.getId(), i1.getName());
+				System.out.printf("아이디 : %s, 이름 : %s", i1.getId(), i1.getName());
 				System.out.println();
-			} else {
-				System.out.println("검색된 결과가 없습니다.");
 			}
-
-			printAll();
-			print();
-			String inputData = input("번호를 선택하세요");
-			run(inputData);
-			System.out.println(i1);
 		}
+		if (!isId) {
+			System.out.println("검색된 결과가 없습니다.");
+		}
+		printAll();
+		print();
+		String inputData = input("번호를 선택하세요");
+		run(inputData);
 	}
-	
+
 	public void printAll() {
 		for (Member mem : list) {
 			System.out.printf("아이디 : %s, 이름 :%s \n", mem.getId(), mem.getName());
-			System.out.println();
 		}
 	}
 

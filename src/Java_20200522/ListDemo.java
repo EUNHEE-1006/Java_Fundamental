@@ -19,7 +19,11 @@ public class ListDemo {
 		}
 
 		/*
-		 * while(true) { int i=0; list.remove(0); if(list.size()==0) break; }
+		 * while(true) { 
+		 	* int i=0; 
+		 	* list.remove(0); 
+		 	* if(list.size()==0) break; 
+		 * }
 		 */
 
 		// list에 있는 모두 숫자 삭제 =>remove(int index)
@@ -39,8 +43,10 @@ public class ListDemo {
 
 
 		/*
-		 * for (int i = 0; i < list.size(); i++) { Integer i1=list.get(i);
-		 * System.out.println(i1); }
+		 * for (int i = 0; i < list.size(); i++) { 
+		 	* Integer i1=list.get(i);
+		 	* System.out.println(i1); 
+		 * }
 		 */
 		
 		

@@ -16,9 +16,11 @@ public class WrapperDemo {
 		 */
 
 		/*
-		 * 목적!!!!! 1. primitive date를 wrapper로 어떻게 (new Integer(1)) 2. wrapper를
-		 * primitive로 어떻게 (intValue()) 3. string => primitive data type
-		 * (Integer.parseInt) 4. primitive data type => String
+		 * 목적!!!!! 
+		 * 1. primitive date를 wrapper로 어떻게 (new Integer(1)) 
+		 * 2. wrapper를 primitive로 어떻게 (intValue()) 
+		 * 3. string => primitive data type(Integer.parseInt)
+		 * 4. primitive data type => String
 		 */
 
 		Integer i1 = new Integer(1); // 1

@@ -1,8 +1,16 @@
 package Java_20200514;
 
 public class Lottery {
-	public int[] lotto;
+	private int[] lotto;
 	
+	public int[] getLotto() {
+		return lotto;
+	}
+
+	public void setLotto(int[] lotto) {
+		this.lotto = lotto;
+	}
+
 	public void createNumber() {
 		for (int i = 0; i < lotto.length; i++) {
 			int random = (int) (Math.random() * 45) + 1;
