@@ -7,11 +7,11 @@ import java.io.IOException;
 
 public class FileInputOutputStreamDemo { // io 에서는 예외처리 필수!!
 	public static void main(String[] args) {
-		FileInputStream fis = null;
+		FileInputStream fis = null; //try안으로 안넣는 이유 : try 안에서만 유용한 변수가 되어 finally에서 쓸수가 없다. 
 		FileOutputStream fos = null;
 
 		try {
-			fis = new FileInputStream("c:\\dev\\jdk-11.0.7_windows-x64_bin.exe");
+			fis = new FileInputStream("c:\\dev\\jdk-11.0.7_windows-x64_bin.exe"); //소스가 바이너리파일
 			fos = new FileOutputStream("c:\\dev\\jdk.exe");
 
 			int readByte = 0;
