@@ -64,12 +64,14 @@ public class MemberManagementDemo {
 
 			if (i1.getId().equals(id)) {
 				System.out.println("새로운 아이디를 입력하세요> ");
+				
 				id = input("아이디> ");
 				i1.setId(id);
 				
 			} else {
 				System.out.println("수정할 아이디가 없습니다.");
 			}
+			
 			printAll();
 			print();
 			String inputData = input("번호를 선택하세요");
