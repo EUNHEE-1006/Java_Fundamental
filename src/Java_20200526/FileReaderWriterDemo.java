@@ -30,7 +30,7 @@ public class FileReaderWriterDemo {
 				System.out.print(new String(readChars, 0, readCharCount)); // 문자열 생성 가능!!!!!!!!!!
 				fw.write(readChars, 0, readCharCount);
 				fw.write(new String(readChars, 0, readCharCount));
-			
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
