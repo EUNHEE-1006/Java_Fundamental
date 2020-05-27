@@ -36,6 +36,7 @@ public class Crawling_Stock {
 			System.out.println(date + "\t" + close + "\t" + dayBeforeRatio + "\t" + open + "\t" + high + "\t" + low
 					+ "\t" + volume);
 		}
+		
 
 	}
 }
