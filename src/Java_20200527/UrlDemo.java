@@ -1,10 +1,8 @@
 package Java_20200527;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URL;
 
 public class UrlDemo {
@@ -25,7 +23,14 @@ public class UrlDemo {
 		System.out.println("ref : " + ref);
 						
 		InputStream in = url.openStream(); //html 정보
-		InputStreamReader isr = null;
+		FileOutputStream fos = new FileOutputStream("c:\\dev\\CoffeeMix.txt");
+		
+		byte[] readBytes = new byte[1024*8];
+		int readByteCount = 0;
+		while((readByteCount=in.read(readBytes))!=-1) {
+			fos.write(readBytes);
+		}
+		/*InputStreamReader isr = null;
 		isr = new InputStreamReader(in);
 		BufferedReader br = new BufferedReader(isr);
 		
@@ -35,7 +40,7 @@ public class UrlDemo {
 		}
 		in.close();
 		isr.close();
-		br.close();
+		br.close();*/
 		
 	}
 
