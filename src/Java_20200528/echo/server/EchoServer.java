@@ -23,7 +23,7 @@ public class EchoServer {
 		
 		//1. ServerSocket 객체를 생성한다.
 		try {
-			serverSocket = new ServerSocket(port);
+			serverSocket = new ServerSocket(port); //클라이언트와 통신할 수 있는 소켓 객체 생성
 			
 			while(true) {
 				System.out.println("클라이언트 접속을 기다리고 있습니다.");

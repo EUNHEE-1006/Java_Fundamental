@@ -32,6 +32,13 @@ public class CharacterDemo {
 		System.out.println("aa" + '\t' + "bb");
 		System.out.println("aa" + '\n' + "bb"); // '\n'은 윈도우 엔터
 		System.out.println("aa" + '\r' + "bb"); // '\r'은 유닉스 엔터
+		
+		String msg = "wend";
+		switch(msg) {
+		case ("wend") : {
+			System.out.println("dddd");
+		}
+		}
 
 	}
 }

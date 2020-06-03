@@ -11,8 +11,8 @@ public class FileInputOutputStreamDemo { // io 에서는 예외처리 필수!!
 		FileOutputStream fos = null;
 
 		try {
-			fis = new FileInputStream("c:\\dev\\jdk-11.0.7_windows-x64_bin.exe"); //소스가 바이너리파일
-			fos = new FileOutputStream("c:\\dev\\jdk.exe");
+			fis = new FileInputStream("c:\\dev\\git-bash.exe"); //소스가 바이너리파일
+			fos = new FileOutputStream("c:\\dev\\git-bash11.exe");
 
 			int readByte = 0;
 			// fis.read() : 한바이트 읽어 반환한다. 더이상 읽을 바이트가 없으면 -1을 반환
