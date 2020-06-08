@@ -44,11 +44,14 @@ public class TransactionDemo {
 			e.printStackTrace();
 		} finally {
 			try {
+				//트랜잭션!!
 				if(isSuccess) {
 					con.commit();
 				} else {
 					con.rollback();
 				}
+				//중요!!!
+				con.setAutoCommit(true); //connection자원 모든 것이 다 true 라서 반납전에 원래대로 돌려주는거
 				if (pstm1 != null)
 					pstm1.close();
 				if (pstm != null)
